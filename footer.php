@@ -57,8 +57,7 @@
             <span>Social media:</span>
             <a href="https://www.instagram.com/artemka4259/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://t.me/wizardmq/" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.tiktok.com/@kas1dio1/video/7302569841842490630" target="_blank"><i class="fab fa-google"></i></a>
+            <a href="https://github.com/wizard8008/zabor.git" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </div>
 </footer>
