@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../images/background2.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    /* background-color: #dff4ffd6; */
+    background: linear-gradient(#ffff99, #ffb266);
+    /* box-shadow: #0000008e 0px 7px 29px 0px; */
+    box-shadow: #ffb36689 0px 7px 29px 0px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.form-group{
+    margin-bottom:30px;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffb534;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.form-control:focus {
+    border-color: #ffb266; /* Change this to your desired color */
+    box-shadow: 0 0 5px #ffb266; /* Optional: Adds a shadow of the same color */
+    outline: none; /* Removes the default outline */
+}
+
+.alert-success {
+    --bs-alert-color: #0f5132;
+    --bs-alert-bg: #d1e7dd;
+    --bs-alert-border-color: #badbcc;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.alert-danger {
+    --bs-alert-color: #842029;
+    --bs-alert-bg: #f8d7da;
+    --bs-alert-border-color: #f5c2c7;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}   
+
+.btn-primary {
+    background-color: #ffb266;
+    --bs-btn-color: #5e2f00;
+    --bs-btn-border-color: #ffb266;
+    --bs-btn-active-bg: #ffb266;
+    --bs-btn-active-border-color: #ffb266;
+    --bs-btn-active-color: #5e2f00;
+    --bs-btn-hover-color: black;
+    --bs-btn-hover-border-color: rgb(255, 255, 255);
+    --bs-btn-hover-bg: #fff;
+}

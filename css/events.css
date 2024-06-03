@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../images/background2.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    color: red;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffb534;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+
+}
+
+.conteiner{
+    width: 100%;
+    height: 100vh;
+    /* margin: 0 auto; /* Чтобы контейнер был по центру */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper{
+    border-radius: 10px;
+    width: 80%;
+    height: fit-content;
+}
+
+.swiper-slide img{
+    width: 100%;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+    color: #dff4ff;
+}
+
+.rectangle {
+    counter-reset: li; 
+    list-style: none; 
+    font: 14px "Trebuchet MS", "Lucida Sans";
+    padding: 0;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    align-items: center;
+    font-weight: 700;
+    }
+
+.rectangle a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    margin: .5em 0 .5em 2.5em;
+    background: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    }
+
+.rectangle a:hover {background: #dff4ff;}       
+.rectangle a:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background: #dff4ff;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+    }
+
+.rectangle a:after {
+    position: absolute;
+    content: "";
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+    transition: all .3s ease-out;
+    }
+
+.rectangle a:hover:after {
+    left: -.5em;
+    border-left-color: #dff4ff;
+    }
+
+.rectangle .date {
+    position: absolute;      /* Позволяет позиционировать элемент относительно его родителя */
+    right: 0.5em;            /* Расположение справа от ссылки */
+    top: 50%;                /* Вертикальное центрирование относительно ссылки */
+    transform: translateY(-50%); /* Корректное центрирование с помощью трансформации */
+    background: #dff4ff;     /* Фон для даты */
+    padding: 0.2em 0.5em;    /* Внутренние отступы для даты */
+    border-radius: 3px;      /* Сглаживание углов */
+    font-size: 0.9em;        /* Размер шрифта для даты */
+    color: #000000;             /* Цвет текста для даты */
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-family: sans-serif;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    letter-spacing: 4px; /* расстояние между буквами в пикселях */
+}
+
+/*ANIMATIONS TEST*/ 
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-text {
+    opacity: 0; /* начальное состояние невидимости */
+    animation: fadeIn 1s ease-out forwards; /* анимация длительностью 1 секунда */
+}
